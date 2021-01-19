@@ -5,3 +5,5 @@ abstract class HomeEvent extends Equatable {
 }
 
 class GoToHomeEvent extends HomeEvent {}
+
+class SplashScreenEvent extends HomeEvent {}

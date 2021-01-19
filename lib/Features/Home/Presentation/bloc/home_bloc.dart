@@ -14,6 +14,9 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   Stream<HomeState> mapEventToState(
     HomeEvent event,
   ) async* {
+    if (event is SplashScreenEvent) {
+      yield SplashScreenState();
+    }
     if (event is GoToHomeEvent) {
       yield GoToHomeState();
     }

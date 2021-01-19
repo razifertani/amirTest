@@ -1,10 +1,28 @@
+import 'dart:async';
+
+import 'package:amirTest/Features/Home/Presentation/bloc/home_bloc.dart';
 import 'package:amirTest/Core/Utils/appColors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class SplashScreenWidget extends StatelessWidget {
-  const SplashScreenWidget({
+class SplashScreenDisplay extends StatefulWidget {
+  const SplashScreenDisplay({
     Key key,
   }) : super(key: key);
+
+  @override
+  _SplashScreenDisplayState createState() => _SplashScreenDisplayState();
+}
+
+class _SplashScreenDisplayState extends State<SplashScreenDisplay> {
+  @override
+  void initState() {
+    super.initState();
+
+    Timer(Duration(milliseconds: 3000), () {
+      BlocProvider.of<HomeBloc>(context).dispatch(GoToHomeEvent());
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -12,12 +30,13 @@ class SplashScreenWidget extends StatelessWidget {
     double screenHeight = MediaQuery.of(context).size.height * 0.02 / 14;
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset(
-              "Assets/Images/logo.png",
+              "Assets/Images/logo.jpg",
               height: screenHeight * 250,
               width: screenWidth * 250,
             ),

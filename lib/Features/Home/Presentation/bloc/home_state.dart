@@ -11,3 +11,5 @@ class LoadingHomeState extends HomeState {}
 class ErrorHomeState extends HomeState {}
 
 class GoToHomeState extends HomeState {}
+
+class SplashScreenState extends HomeState {}

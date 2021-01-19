@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         primaryColor: AppColors.primaryColor,
         buttonColor: AppColors.primaryColor,
       ),
-      initialRoute: '/signinProvider',
+      initialRoute: '/homeProvider',
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }

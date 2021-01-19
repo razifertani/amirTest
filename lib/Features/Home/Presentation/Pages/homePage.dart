@@ -1,3 +1,4 @@
+import 'package:amirTest/Features/Home/Presentation/Widgets/splashScreenWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:amirTest/Core/Utils/loadingWidget.dart';
@@ -12,7 +13,7 @@ class HomePage extends StatelessWidget {
     return BlocBuilder<HomeBloc, HomeState>(
       builder: (context, state) {
         if (state is EmptyHomeState) {
-          return HomeDisplay();
+          return SplashScreenDisplay();
         }
 
         if (state is GoToHomeState) {
