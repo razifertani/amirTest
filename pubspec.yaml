@@ -1,0 +1,53 @@
+name: amirTest
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  get_it:
+  flutter_bloc: ^0.21.0
+  equatable: ^0.4.0
+  dartz:
+  http:
+  data_connection_checker:
+  mercury_client: 1.1.12
+  shared_preferences:
+  device_preview:
+  sk_onboarding_screen: ^1.0.1
+  
+  cupertino_icons: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - Assets/Images/
+    - Assets/Fonts/
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: Assets/Fonts/Roboto-Black.ttf
+          weight: 900
+        - asset: Assets/Fonts/Roboto-Bold.ttf
+          weight: 700
+        - asset: Assets/Fonts/Roboto-Medium.ttf
+          weight: 500
+        - asset: Assets/Fonts/Roboto-Regular.ttf
+          weight: 300
+        - asset: Assets/Fonts/Roboto-Light.ttf
+          weight: 200
+        - asset: Assets/Fonts/Roboto-Thin.ttf
+          weight: 100
