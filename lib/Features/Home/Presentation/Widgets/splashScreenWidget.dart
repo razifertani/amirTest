@@ -19,7 +19,7 @@ class _SplashScreenDisplayState extends State<SplashScreenDisplay> {
   void initState() {
     super.initState();
 
-    Timer(Duration(milliseconds: 000), () {
+    Timer(Duration(milliseconds: 4000), () {
       BlocProvider.of<HomeBloc>(context).dispatch(GoToHomeEvent());
     });
   }
@@ -38,8 +38,8 @@ class _SplashScreenDisplayState extends State<SplashScreenDisplay> {
             SizedBox(
               height: screenWidth * 0.05,
             ),
-            Image.asset(
-              "Assets/Images/logo.jpg",
+            Image.network(
+              "https://princesseverafterevents.com/wp-content/uploads/2017/01/childrens-hospital-colorado-logo.jpg",
               height: screenHeight * 0.75,
               width: screenWidth * 0.75,
             ),
@@ -51,7 +51,7 @@ class _SplashScreenDisplayState extends State<SplashScreenDisplay> {
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
-                color: AppColors.blackColor,
+                color: AppColors.primaryColor,
               ),
             ),
           ],

@@ -16,12 +16,11 @@ dependencies:
   flutter_bloc: ^0.21.0
   equatable: ^0.4.0
   dartz:
-  http:
   data_connection_checker:
-  mercury_client: 1.1.12
-  device_preview:
   animated_bottom_navigation_bar: ^0.2.1
-  dashed_circle: ^0.0.1
+  slide_popup_dialog: ^0.0.2
+  flutter_datetime_picker: ^1.4.0
+  toast: ^0.1.5
 
   
   cupertino_icons: ^1.0.0
