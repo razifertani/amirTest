@@ -19,9 +19,10 @@ dependencies:
   http:
   data_connection_checker:
   mercury_client: 1.1.12
-  shared_preferences:
   device_preview:
-  sk_onboarding_screen: ^1.0.1
+  animated_bottom_navigation_bar: ^0.2.1
+  dashed_circle: ^0.0.1
+
   
   cupertino_icons: ^1.0.0
 

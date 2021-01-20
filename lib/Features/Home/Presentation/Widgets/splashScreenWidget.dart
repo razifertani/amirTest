@@ -19,32 +19,37 @@ class _SplashScreenDisplayState extends State<SplashScreenDisplay> {
   void initState() {
     super.initState();
 
-    Timer(Duration(milliseconds: 3000), () {
+    Timer(Duration(milliseconds: 000), () {
       BlocProvider.of<HomeBloc>(context).dispatch(GoToHomeEvent());
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width * 0.04 / 14.5;
-    double screenHeight = MediaQuery.of(context).size.height * 0.02 / 14;
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            SizedBox(
+              height: screenWidth * 0.05,
+            ),
             Image.asset(
               "Assets/Images/logo.jpg",
-              height: screenHeight * 250,
-              width: screenWidth * 250,
+              height: screenHeight * 0.75,
+              width: screenWidth * 0.75,
             ),
-            SizedBox(height: screenWidth * 50),
+            SizedBox(
+              height: screenWidth * 0.05,
+            ),
             Text(
-              "V 0.3.3",
+              "V 0.0.1",
               style: TextStyle(
-                fontSize: 32,
+                fontSize: 28,
                 fontWeight: FontWeight.bold,
                 color: AppColors.blackColor,
               ),
